@@ -261,9 +261,9 @@ class AmazonPayment {
 	public function script()
 	{
 		if ($this->config['sandbox_mode'] === true) {
-			$script = 'https://static-fe.payments-amazon.com/OffAmazonPayments/jp/sandbox/lpa/js/Widgets.js';
+			$script = 'https://static-fe.payments-amazon.com/OffAmazonPayments/jp/sandbox/lpa/js/Widgets.js?sellerId=';
 		} else {
-			$script = 'https://static-fe.payments-amazon.com/OffAmazonPayments/jp/lpa/js/Widgets.js';
+			$script = 'https://static-fe.payments-amazon.com/OffAmazonPayments/jp/lpa/js/Widgets.js?sellerId=';
 		}
 
 		return $script . $this->config['seller_id'];
