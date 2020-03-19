@@ -261,9 +261,9 @@ class AmazonPayment {
 	public function script()
 	{
 		if ($this->config['sandbox_mode'] === true) {
-			$script = 'https://origin-na.ssl-images-amazon.com/images/G/09/EP/offAmazonPayments/sandbox/prod/lpa/js/Widgets.js?sellerId=';
+			$script = 'https://static-fe.payments-amazon.com/OffAmazonPayments/jp/sandbox/lpa/js/Widgets.js';
 		} else {
-			$script = 'https://origin-na.ssl-images-amazon.com/images/G/09/EP/offAmazonPayments/sandbox/prod/lpa/js/Widgets.js?sellerId=';
+			$script = 'https://static-fe.payments-amazon.com/OffAmazonPayments/jp/lpa/js/Widgets.js';
 		}
 
 		return $script . $this->config['seller_id'];
